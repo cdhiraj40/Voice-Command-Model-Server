@@ -1,4 +1,3 @@
-import http from 'http';
 import express from 'express';
 import morgan from 'morgan';
 import model_versions from './model_versions.json'
@@ -12,7 +11,7 @@ app.use(morgan('dev'));
 /** Parse the request */
 app.use(bodyParser.urlencoded({ extended: true }))
 /** Takes care of JSON data */
-router.use(express.json());
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('EnviroCar Model!!');
