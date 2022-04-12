@@ -7,10 +7,12 @@ const bodyParser = require('body-parser');
 
 const modelVersions = model_versions;
 
-/** Parse the request */
-app.use(bodyParser.urlencoded({ extended: true }))
 /** Takes care of JSON data */
 app.use(express.json());
+
+/** Parse the request */
+app.use(bodyParser.urlencoded({ extended: true }))
+
 
 app.get('/', (req, res) => {
     res.send('EnviroCar Model!!');
