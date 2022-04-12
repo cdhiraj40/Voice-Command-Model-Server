@@ -1,3 +1,4 @@
+// const getModelByVersion = require('./get_model')
 const express = require('express');
 const app = express();
 const Joi = require('@hapi/joi');
@@ -24,6 +25,15 @@ app.get('/model', (req, res) => {
     var modelLink = getModelByVersion(modelVersions, req.body.versionCode);
     res.send(modelLink);
 })
+
+function getModelByVersion(modelVersions, versionCode) {
+
+    for (var i = 0; i < modelVersions.length; i++) {
+        if (modelVersions[i].model_version == versionCode) {
+            return modelVersions[i].model_link;
+        }
+    }
+}
 
 const port = process.env.PORT || '5000';
 app.listen(port, () => console.log(`Server started on Port ${port}`));

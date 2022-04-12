@@ -8,11 +8,4 @@
 //     );
 // }
 
-export function getModelByVersion(modelVersions, versionCode) {
-
-    for (var i = 0; i < modelVersions.length; i++) {
-        if (modelVersions[i].model_version == versionCode) {
-            return modelVersions[i].model_link;
-        }
-    }
-}
+// export 
