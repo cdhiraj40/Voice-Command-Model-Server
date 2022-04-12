@@ -14,11 +14,11 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 
-app.get('/', (req, res) => {
+app.get('/', (res) => {
     res.send('EnviroCar Model!!');
 })
 
-app.get('/model', (versionCode) => {
+app.get('/model', (versionCode, res) => {
     console.log(versionCode.body);
 
     // get the model link
