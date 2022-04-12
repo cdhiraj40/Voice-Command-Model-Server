@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 
 app.get('/', (req,res) => {
-    res.send('Envirocar Model Backend!!');
+    res.send('Voice Command Model Server!!');
 })
 
 app.get('/test', (req, res) =>{

@@ -1,7 +1,7 @@
 {
-  "name": "envirocar-model",
+  "name": "voice-command-model-server",
   "version": "1.0.0",
-  "description": "EnviroCar Model",
+  "description": "Voice Command Model Server",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
