@@ -1,1 +1,0 @@
-const VERSION_CODE = 1.0
