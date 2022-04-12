@@ -18,10 +18,10 @@ app.get('/test', (req, res) =>{
     res.send(req.body)
 })
 
-app.get('/model', (versionCode, res) => {
-    console.log(versionCode.body);  
+app.get('/model', (req, res) => {
+    console.log(req.versionCode.body);  
     // get the model link
-    var modelLink = getModelByVersion(modelVersions, versionCode);
+    var modelLink = getModelByVersion(modelVersions, req.versionCode);
     res.send(modelLink);
 })
 
