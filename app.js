@@ -1,13 +1,12 @@
-import express from 'express';
-import morgan from 'morgan';
-import model_versions from './model_versions.json'
+const express = require('express');
 const app = express();
+
+
+import model_versions from './model_versions.json'
 const bodyParser = require('body-parser');
 
 const modelVersions = model_versions;
 
-/** Logging */
-app.use(morgan('dev'));
 /** Parse the request */
 app.use(bodyParser.urlencoded({ extended: true }))
 /** Takes care of JSON data */
