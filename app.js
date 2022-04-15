@@ -22,14 +22,13 @@ app.get('/test', (req, res) =>{
 app.get('/model', (req, res) => {
     console.log(req.body.versionCode);  
     // get the model link
-    var modelLink = getModelByVersion(modelVersions, req.body.versionCode);
+    var modelLink = getModelByVersionLanguage(modelVersions,req.body.languageCode, req.body.versionCode);
     res.send(modelLink);
 })
 
-function getModelByVersion(modelVersions, versionCode) {
-
+function getModelByVersionLanguage(modelVersions,languageCode, versionCode) {
     for (var i = 0; i < modelVersions.length; i++) {
-        if (modelVersions[i].model_version == versionCode) {
+        if (modelVersions[i].model_version == versionCode && modelVersions[i].language_code == languageCode ) {
             return modelVersions[i].model_link;
         }
     }
